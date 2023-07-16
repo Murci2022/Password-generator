@@ -9,13 +9,14 @@
 
   <title>Frontend Mentor | Password generator app</title>
   <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
 </head>
 
 <body>
   <div class="container">
     <!-- Title -->
     <div class="title">
-      <h2>Password Generator</h2>
+      <h4>Password Generator</h4>
     </div>
 
 
@@ -24,7 +25,7 @@
     <main class="container-body" id="container-body">
       <!-- HEADER -->
       <header class="header">
-        <h1 class="header-title">PTy1f5DaFX</h1>
+        <h2 class="header-title">PTy1f5DaFX</h2>
         <a href="#" class="header-icon">
           <svg width="21" height="24" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -35,33 +36,37 @@
       </header>
 
 
-      <!-- CHeckboxes -->
-      <div class="checkbox-group" id="checkbox-group">
+      <article>
+        <!-- CHeckboxes -->
+        <div class="checkbox-group" id="checkbox-group">
 
-        <!-- 1 -->
-        <div class="form-holder"> <input type="checkbox" id="checkbox1">
-          <label for="checkbox1">Include UpperCase Letter</label>
+          <!-- 1 -->
+          <div class="form-holder"> <input type="checkbox" id="checkbox1">
+            <label for="checkbox1">Include UpperCase Letter</label>
+          </div>
+          <!-- 2 -->
+
+          <div class="form-holder"> <input type="checkbox" id="checkbox2">
+            <label for="checkbox2">Include Lowercase Letter</label>
+          </div>
+
+          <!-- 3 -->
+          <div class="form-holder"> <input type="checkbox" id="checkbox3">
+            <label for="checkbox3">Include Numbers</label>
+          </div>
+
+          <!-- 4 -->
+          <div class="form-holder"> <input type="checkbox" id="checkbox4">
+            <label for="checkbox4">Include Symbols</label>
+          </div>
         </div>
-        <!-- 2 -->
 
-        <div class="form-holder"> <input type="checkbox" id="checkbox2">
-          <label for="checkbox2">Include Lowercase Letter</label>
-        </div>
+        <!-- BTN -->
 
-        <!-- 3 -->
-        <div class="form-holder"> <input type="checkbox" id="checkbox3">
-          <label for="checkbox3">Include Numbers</label>
-        </div>
+        <button class="btn" id="btn">GENERATE</button>
+      </article>
 
-        <!-- 4 -->
-        <div class="form-holder"> <input type="checkbox" id="checkbox4">
-          <label for="checkbox4">Include Symbols</label>
-        </div>
-      </div>
 
-      <!-- BTN -->
-
-      <button class="btn" id="btn">GENERATE</button>
     </main>
 
   </div>

@@ -31,7 +31,7 @@ body{
     
     border: 2px black dotted;
     text-align: center;
-    margin-bottom: 10px;
+    color:#868491;
     
     
 }
@@ -39,8 +39,7 @@ body{
 
 /* MAIN */
 .container-body{
-    
-    background-color: var(--card-color);
+    height: 400px;
     
 }
 /* Header for display+clipboard */
@@ -50,15 +49,33 @@ body{
     display:flex;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--card-color);
+    padding:0 15px;
+    color:#ebeaf2;
+    margin-bottom: 30px;
     
+}
+
+/* Article */
+
+article{
+    
+    background-color: var(--card-color);
+    padding: 0 15px;
 }
 
 
 
 .checkbox-group{
-
+    
     display: flex;
     flex-direction: column;
    
 
+}
+
+.btn{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
 }
