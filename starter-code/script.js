@@ -4,45 +4,87 @@ const checkBox1 = document.getElementById("checkbox1");
 
 
 
-/* abc */
+
+
+/* abc LOWER*/
 const lowercaseLetters = Array.from({length: 26}, (_, index) => String.fromCharCode(97 + index));
 
 const abcLength = lowercaseLetters.length
+
+/* abc UPPER */
+const uppercaseLetters = Array.from({ length: 26 }, (_, index) =>
+  String.fromCharCode(65 + index)
+);
 
 /* const password */
 
 
 
-//function to generate number
-function generateNr(){
+//function to generate number for LOWERCASE letters
+function generateNrCheckbox1(){
     const randomNr1 = Math.floor(Math.random()*abcLength)
     const randomNr2 = Math.floor(Math.random()*abcLength)
     const randomNr3 = Math.floor(Math.random()*abcLength)
     return [randomNr1,randomNr2,randomNr3]
 }
 
+//function to generate number for UPPERCASE Letters
+function generateNrCheckbox2(){
+    const randomNr1 = Math.floor(Math.random()*abcLength)
+    const randomNr2 = Math.floor(Math.random()*abcLength)
+    const randomNr3 = Math.floor(Math.random()*abcLength)
+    return [randomNr1,randomNr2,randomNr3]
+   
+}
+
 
 
 //function to generate lowerCaseLetters based on numbers
-function generateLetters(numbers){
+function genLowerLetters(numbers){
+    console.log("lower",numbers)
     const newPassword = numbers.map((nr)=> lowercaseLetters[nr])
     return newPassword.join("");
 }
 
 
+function genUpperLetters(numbers){
+    console.log("Upper",numbers)
+    const newPasswordUp = numbers.map((nr)=> uppercaseLetters[nr])
+    return newPasswordUp.join("");
+}
 
+genLowerLetters(generateNrCheckbox1()); //initial password
+genUpperLetters(generateNrCheckbox2()); //initial password
 
-generateLetters(generateNr()); //initial password
-
+function shuffleFunc(array){
+    
+    const arrLenght = array.length;
+    let temp = ""
+    let i = array.length;
+    while(--i>0){
+        
+       const j = Math.ceil(Math.random()*arrLenght) ;
+       temp = array[j];
+       array[j] = array[i]
+       array[i] = temp;
+       
+    }
+    return array;
+}
 
 btn.addEventListener("click",()=>{
     console.log("click")
     if(checkBox1.checked){
-         const newNumbers = generateNr();
-    console.log(newNumbers)
-    const newPassword = generateLetters(newNumbers);
-    displayPassword.innerHTML = newPassword
-    console.log(newPassword)
+         const newNumbers1 = generateNrCheckbox1();
+         const newNumbers2 = generateNrCheckbox2()
+    console.log(newNumbers1)
+    console.log(newNumbers2)
+    const newPassword1 = genLowerLetters(newNumbers1);
+    const newPassword2 = genUpperLetters(newNumbers2);
+    const newArr = [...newPassword1,...newPassword2];
+    const mixedNewArr = shuffleFunc(newArr).join("")
+    displayPassword.innerHTML = mixedNewArr;
+   
     }else{
         return;
     }
