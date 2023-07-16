@@ -16,7 +16,9 @@ const uppercaseLetters = Array.from({ length: 26 }, (_, index) =>
   String.fromCharCode(65 + index)
 );
 
-/* const password */
+/* nr */
+const allNr = [0,1,2,3,4,5,6,7,8,9]
+const allNrLength = allNr.length;
 
 
 
@@ -37,6 +39,16 @@ function generateNrCheckbox2(){
    
 }
 
+//function to generate number for NUMBERS
+function generateNrCheckbox3(){
+    console.log("he")
+    const randomNr1 = Math.floor(Math.random()*allNrLength)
+    const randomNr2 = Math.floor(Math.random()*allNrLength)
+    const randomNr3 = Math.floor(Math.random()*allNrLength)
+    return [randomNr1,randomNr2,randomNr3]
+
+}
+
 
 
 //function to generate lowerCaseLetters based on numbers
@@ -46,15 +58,27 @@ function genLowerLetters(numbers){
     return newPassword.join("");
 }
 
-
+//function to generate upperCaseLetters based on numbers
 function genUpperLetters(numbers){
     console.log("Upper",numbers)
     const newPasswordUp = numbers.map((nr)=> uppercaseLetters[nr])
     return newPasswordUp.join("");
 }
 
+// function to generate randomNumbers based on numbers
+function genNumber(numbers){
+    console.log(numbers,"numbers")
+    const newPassworNr = numbers.map((nr)=>allNr[nr])
+    
+    return newPassworNr;
+}
+
+
+
 genLowerLetters(generateNrCheckbox1()); //initial password
 genUpperLetters(generateNrCheckbox2()); //initial password
+genNumber(generateNrCheckbox3());      // initial password
+
 
 function shuffleFunc(array){
     
