@@ -1,5 +1,10 @@
 const btn = document.getElementById("btn")
+const abc = ["a","b","c"]
+const abcLength = abc.length
 
+
+// make a func which 
 btn.addEventListener("click",()=>{
-    console.log("click")
+    const randNumber = Math.floor(Math.random()*abcLength)
+    console.log(randNumber)
 })
