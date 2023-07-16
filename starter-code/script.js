@@ -1,6 +1,8 @@
 const btn = document.getElementById("btn")
 const displayPassword = document.getElementById("header-title")
 const checkBox1 = document.getElementById("checkbox1");
+const checkBox2 = document.getElementById("checkbox2");
+const checkBox3 = document.getElementById("checkbox3");
 
 
 
@@ -98,14 +100,18 @@ function shuffleFunc(array){
 
 btn.addEventListener("click",()=>{
     console.log("click")
-    if(checkBox1.checked){
+    if(checkBox1.checked && ){
          const newNumbers1 = generateNrCheckbox1();
          const newNumbers2 = generateNrCheckbox2()
+         const newNubers3 = generateNrCheckbox3()
+
     console.log(newNumbers1)
     console.log(newNumbers2)
+    console.log(newNubers3,"3")
     const newPassword1 = genLowerLetters(newNumbers1);
     const newPassword2 = genUpperLetters(newNumbers2);
-    const newArr = [...newPassword1,...newPassword2];
+    const newPassword3 = genNumber(newNubers3);
+    const newArr = [...newPassword1,...newPassword2,...newPassword3];
     const mixedNewArr = shuffleFunc(newArr).join("")
     displayPassword.innerHTML = mixedNewArr;
    
