@@ -10,7 +10,7 @@ const lowercaseLetters = Array.from({length: 26}, (_, index) => String.fromCharC
 const abcLength = lowercaseLetters.length
 
 /* const password */
-const password = [];
+
 
 
 //function to generate number
@@ -23,20 +23,34 @@ function generateNr(){
 
 
 
-const arrRandNr = generateNr()
-
-function generateLetters(){
-    arrRandNr.map((nr)=>{
-
-        const randLetter = lowercaseLetters[nr]
-        password.push(randLetter)
-        return randLetter
-        
-    })
+//function to generate lowerCaseLetters based on numbers
+function generateLetters(numbers){
+    const newPassword = numbers.map((nr)=> lowercaseLetters[nr])
+    return newPassword.join("");
 }
 
-console.log(generateLetters(arrRandNr))
-console.log(randLetter)
+
+
+
+generateLetters(generateNr()); //initial password
+
+
+btn.addEventListener("click",()=>{
+    console.log("click")
+    if(checkBox1.checked){
+         const newNumbers = generateNr();
+    console.log(newNumbers)
+    const newPassword = generateLetters(newNumbers);
+    displayPassword.innerHTML = newPassword
+    console.log(newPassword)
+    }else{
+        return;
+    }
+})
+
+
+
+
 
 
 
