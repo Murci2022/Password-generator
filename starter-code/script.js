@@ -9,26 +9,50 @@ const lowercaseLetters = Array.from({length: 26}, (_, index) => String.fromCharC
 
 const abcLength = lowercaseLetters.length
 
+/* const password */
+const password = [];
+
 
 //function to generate number
 function generateNr(){
-    const randomNr = Math.floor(Math.random()*abcLength)
-    return randomNr
+    const randomNr1 = Math.floor(Math.random()*abcLength)
+    const randomNr2 = Math.floor(Math.random()*abcLength)
+    const randomNr3 = Math.floor(Math.random()*abcLength)
+    return [randomNr1,randomNr2,randomNr3]
 }
 
- console.log( generateNr())
-//function to generate a letter 
-function generateLetter(p1){
-    console.log(p1)
-    const randLetter = lowercaseLetters[p1]
-    return randLetter
-  
+
+
+const arrRandNr = generateNr()
+
+function generateLetters(){
+    arrRandNr.map((nr)=>{
+
+        const randLetter = lowercaseLetters[nr]
+        password.push(randLetter)
+        return randLetter
+        
+    })
 }
-const randNr = generateNr();
-const randLetter = generateLetter(randNr);
+
+console.log(generateLetters(arrRandNr))
 console.log(randLetter)
 
+
+
+
+
+
+//function to generate a lette
+
+
+
+
+
+
+
 //function to generate letter+letter+letter
+
 
 // eventl for button - inside if(checkbox is checked = generate password)
 
