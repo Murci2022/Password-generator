@@ -58,6 +58,16 @@ body{
 
 /* Article */
 
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2{
+    color:#A4FFAF;
+}
+
 article{
     
     background-color: var(--card-color);
@@ -79,3 +89,43 @@ article{
     height: 40px;
     margin: 10px 0;
 }
+
+/* Set the track color */
+input.slider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  input.slider::-webkit-slider-runnable-track {
+    background-color: #ddd;
+    height: 8px;
+  }
+  
+  input.slider::-moz-range-track {
+    background-color: #ddd;
+    height: 6px;
+  }
+  
+  /* Set the thumb (handle) color */
+  input.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  input.slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background-color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+

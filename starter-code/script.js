@@ -95,6 +95,7 @@ function genNumber(numbers){
 
 
 
+
 genLowerLetters(generateNrCheckbox1()); //initial password
 genUpperLetters(generateNrCheckbox2()); //initial password
 genNumber(generateNrCheckbox3());      // initial password
