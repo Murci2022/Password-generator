@@ -8,7 +8,8 @@ const nrConti = document.getElementById("nr-conti")
 
 const slider = document.getElementById("slider");
 
-/* initial password */
+/* initial  */
+let displayNr = 8;
 
 
 
@@ -51,20 +52,30 @@ function randIndex(array){
 };
 
 
+/* funcTEst */
+
+
+function testFunc(test){
+    console.log(test,"test")
+}
+
 
 
 // -------------------------------------generate password function
 function generatePassword(){
+
+    
     let password = "";
     
     if(checkBox1.checked){
         const indexes = [
-        randIndex(lowercaseLetters),
-        randIndex(lowercaseLetters),
-        randIndex(lowercaseLetters),
-    ];
-       password += indexes.map((index)=>lowercaseLetters[index]).join("")
-      
+            randIndex(lowercaseLetters),
+            randIndex(lowercaseLetters),
+            randIndex(lowercaseLetters),
+        ];
+        password += indexes.map((index)=>lowercaseLetters[index]).join("")
+
+        
     }
     
     if(checkBox2.checked){
@@ -75,7 +86,7 @@ function generatePassword(){
         ];
         password += indexes.map((index)=>uppercaseLetters[index]).join("")
        
-      }
+    }
     if(checkBox3.checked){
         const indexes = [
             randIndex(allNr),
@@ -83,8 +94,8 @@ function generatePassword(){
             randIndex(allNr),
         ];
         password += indexes.map((index)=>allNr[index]).join("")
-       
-      }
+        
+    }
     if(checkBox4.checked){
         const indexes = [
             randIndex(allSymbols),
@@ -93,12 +104,12 @@ function generatePassword(){
         ];
         password += indexes.map((index)=>allSymbols[index]).join("")
        
-      }
-
+    }
     
-    return password;
     
-   
+    return password.slice();
+    
+    
     
     
 }
@@ -106,23 +117,25 @@ function generatePassword(){
 /* -----------Fisher-Yates Shuffle---------------- */
 
 function shuffleFunc(fullArr){
-   
+    const newDisplayNr = Number(displayNr);
+    console.log(typeof newDisplayNr)
+    
     console.log(fullArr,"fullArr")
-
+    
     const shuffledArray = [...fullArr]
     console.log(shuffledArray,"shuffledArr")
 
-   let temp = ""
-   let i = fullArr.length
-
-   while(--i>=0){
-    const j = Math.floor(Math.random()*(shuffledArray.length))
+    let temp = ""
+    let i = fullArr.length
+    
+    while(--i>=0){
+        const j = Math.floor(Math.random()*(shuffledArray.length))
    temp = shuffledArray[j]
    shuffledArray[j]=shuffledArray[i]
    shuffledArray[i]=temp;
    
 }
-    return shuffledArray.join("")
+return shuffledArray.join("")
 }
 
 
@@ -148,9 +161,12 @@ btn.addEventListener("click",()=>{
 })
 
 slider.addEventListener("change",(e)=>{
-    const displayNr = e.target.value;
+    displayNr = e.target.value;
+    testFunc(displayNr)
+    
 
     nrConti.innerHTML = displayNr;
     
 
 })
+
