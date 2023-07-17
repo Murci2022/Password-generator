@@ -38,10 +38,19 @@ function randIndex(array){
 ;
 
 console.log(randIndex(allNr))
-
+/* -----------Fisher-Yates Shuffle---------------- */
 // generate shuffled array
-function shuffleFunc(array){
-console.log(array)
+function shuffleFunc(arr){
+    let i = arr.length;
+    let temp = "";
+
+    while(--i>0){
+        let j = Math.floor(Math.random()*arr.length)
+        console.log(i,"i")
+        console.log(j,"j")
+    }
+
+    console.log("arr",arr)
 }
 
 
@@ -50,6 +59,11 @@ console.log(array)
 function generatePassword(){
     
     const passwordLetter = [
+        lowercaseLetters[randIndex(lowercaseLetters)],
+        lowercaseLetters[randIndex(lowercaseLetters)],
+        lowercaseLetters[randIndex(lowercaseLetters)],
+        lowercaseLetters[randIndex(lowercaseLetters)],
+        lowercaseLetters[randIndex(lowercaseLetters)],
         lowercaseLetters[randIndex(lowercaseLetters)],
         lowercaseLetters[randIndex(lowercaseLetters)],
         lowercaseLetters[randIndex(lowercaseLetters)],

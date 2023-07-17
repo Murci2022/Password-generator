@@ -24,7 +24,7 @@ const allNr = [0,1,2,3,4,5,6,7,8,9];
 const abcLength = lowercaseLetters.length;
 const allNrLength = allNr.length;
 
-/* ------------functions--------------------- */
+/* ------------Fisher-Yates Shuffle--------------------- */
 
 function shuffleFunc(array){
     
