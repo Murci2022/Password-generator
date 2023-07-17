@@ -96,7 +96,7 @@ function shuffleFunc(fullArr){
    shuffledArray[j]=shuffledArray[i]
    shuffledArray[i]=temp;
    
-   return shuffledArray
+   return shuffledArray.join("")
    }
 }
 
