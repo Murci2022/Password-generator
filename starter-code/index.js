@@ -4,6 +4,7 @@ const checkBox1 = document.getElementById("checkbox1");
 const checkBox2 = document.getElementById("checkbox2");
 const checkBox3 = document.getElementById("checkbox3");
 const checkBox4 = document.getElementById("checkbox4");
+const nrConti = document.getElementById("nr-conti")
 
 const slider = document.getElementById("slider");
 
@@ -148,6 +149,8 @@ btn.addEventListener("click",()=>{
 
 slider.addEventListener("change",(e)=>{
     const displayNr = e.target.value;
-    console.log(displayNr)
+
+    nrConti.innerHTML = displayNr;
+    
 
 })
