@@ -47,8 +47,8 @@ function generatePassword(){
         randIndex(lowercaseLetters),
         randIndex(lowercaseLetters),
     ];
-       password += indexes.map((index)=>lowercaseLetters[index])
-       console.log(password,"checkbox1")
+       password += indexes.map((index)=>lowercaseLetters[index]).join("")
+      
     }
     
     if(checkBox2.checked){
@@ -57,8 +57,8 @@ function generatePassword(){
             randIndex(uppercaseLetters),
             randIndex(uppercaseLetters),
         ];
-        password += indexes.map((index)=>uppercaseLetters[index])
-        console.log(password,"checkbox2")
+        password += indexes.map((index)=>uppercaseLetters[index]).join("")
+       
       }
 
     
@@ -73,21 +73,21 @@ function generatePassword(){
 
 function shuffleFunc(fullArr){
    
-    console.log("fullArr",fullArr)
-    const fullArrLength = fullArr.length
+    console.log(fullArr,"fullArr")
 
-   console.log(fullArr.length,"fullArr")
+    const shuffledArray = [...fullArr]
+    console.log(shuffledArray,"shuffledArr")
 
    let temp = ""
    let i = fullArr.length
 
    while(--i>0){
-    const j = Math.floor(Math.random()*fullArrLength)
-   temp = fullArr[j]
-   fullArr[j]=fullArr[i]
-   fullArr[i]=temp;
+    const j = Math.floor(Math.random()*(shuffledArray.length))
+   temp = shuffledArray[j]
+   shuffledArray[j]=shuffledArray[i]
+   shuffledArray[i]=temp;
    
-   return fullArr
+   return shuffledArray
    }
 }
 
@@ -102,7 +102,7 @@ function shuffleFunc(fullArr){
 btn.addEventListener("click",()=>{
     if(checkBox1.checked){
         
-        console.log(generatePassword())
+   
         const fullShaffledPassword = shuffleFunc(generatePassword());
    
 
