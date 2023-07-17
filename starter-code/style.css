@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
 :root {
     --bg-color: #131218;
+    --color: #fff;
     --card-color: #24232B;
   }
   
@@ -11,7 +12,7 @@
 body{
     background-color: #131218;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
     font-family: 'JetBrains Mono', monospace;
@@ -19,9 +20,12 @@ body{
 }
 /* CONTAINER */
 .container{
-
+    background-color: #030012;
+    color: var(--color);
     border: 2px black solid;
+
     width: 400px;
+    max-width: 100%;
     
 }
 
@@ -32,6 +36,7 @@ body{
     border: 2px black dotted;
     text-align: center;
     color:#868491;
+    
     
     
 }
@@ -52,7 +57,7 @@ body{
     background-color: var(--card-color);
     padding:0 15px;
     color:#ebeaf2;
-    margin-bottom: 30px;
+    margin: 0 20px 30px 20px ;
     
 }
 
@@ -68,20 +73,32 @@ h2{
     color:#A4FFAF;
 }
 
+.nr{
+    color: #fff;
+}
+
 article{
     
     background-color: var(--card-color);
     padding: 0 15px;
 }
 
-
+/* slider conti */
+.range-input-conti{
+    background-color: #342491;
+    margin-bottom: 20px;
+}
 
 .checkbox-group{
     
     display: flex;
     flex-direction: column;
-   
+   margin:20px 0
 
+}
+
+.form-holder{
+    margin: 10px 0;
 }
 
 .btn{
