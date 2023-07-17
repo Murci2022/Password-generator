@@ -37,7 +37,6 @@ function randIndex(array){
 ;
 
 console.log(randIndex(allNr))
-/* -----------Fisher-Yates Shuffle---------------- */
 
 
 
@@ -45,22 +44,30 @@ console.log(randIndex(allNr))
 // generate password function
 function generatePassword(){
     let password = "";
-   
-       const indexes = [
+    
+    const indexes = [
         randIndex(lowercaseLetters),
         randIndex(lowercaseLetters),
         randIndex(lowercaseLetters),
-         ]
+    ]
     password += indexes.map((index)=>lowercaseLetters[index])
-     
-
+    
+    
     return password
-  
-   
+    
+    
 }
 
-console.log(generatePassword(),"on click")
+/* -----------Fisher-Yates Shuffle---------------- */
+
+
 
 // click event on btn
 btn.addEventListener("click",()=>{
+    if(checkBox1.checked){
+       console.log(generatePassword()) 
+    }else{
+        console.log("not checked")
+    }
+    
 })
