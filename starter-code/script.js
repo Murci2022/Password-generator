@@ -11,15 +11,17 @@ const checkBox3 = document.getElementById("checkbox3");
 /* abc LOWER*/
 const lowercaseLetters = Array.from({length: 26}, (_, index) => String.fromCharCode(97 + index));
 
-const abcLength = lowercaseLetters.length
 
 /* abc UPPER */
 const uppercaseLetters = Array.from({ length: 26 }, (_, index) =>
-  String.fromCharCode(65 + index)
+String.fromCharCode(65 + index)
 );
 
 /* nr */
-const allNr = [0,1,2,3,4,5,6,7,8,9]
+const allNr = [0,1,2,3,4,5,6,7,8,9];
+
+/* length */
+const abcLength = lowercaseLetters.length;
 const allNrLength = allNr.length;
 
 
@@ -100,7 +102,7 @@ function shuffleFunc(array){
 
 btn.addEventListener("click",()=>{
     console.log("click")
-    if(checkBox1.checked && ){
+    if(checkBox1.checked){
          const newNumbers1 = generateNrCheckbox1();
          const newNumbers2 = generateNrCheckbox2()
          const newNubers3 = generateNrCheckbox3()
