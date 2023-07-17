@@ -39,16 +39,23 @@ function randIndex(array){
 
 console.log(randIndex(allNr))
 
+// generate shuffled array
+function shuffleFunc(array){
+console.log(array)
+}
 
 
 
 // generate password function
 function generatePassword(){
+    
     const passwordLetter = [
         lowercaseLetters[randIndex(lowercaseLetters)],
         lowercaseLetters[randIndex(lowercaseLetters)],
         lowercaseLetters[randIndex(lowercaseLetters)],
-]
+        
+    ]
+    shuffleFunc(passwordLetter);
     password = passwordLetter.join("")
      
 
