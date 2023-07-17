@@ -4,6 +4,9 @@ const checkBox1 = document.getElementById("checkbox1");
 const checkBox2 = document.getElementById("checkbox2");
 const checkBox3 = document.getElementById("checkbox3");
 const checkBox4 = document.getElementById("checkbox4");
+
+const slider = document.getElementById("slider");
+
 /* initial password */
 
 
@@ -34,6 +37,10 @@ const allSymbols = [
 /* length */
 const abcLength = lowercaseLetters.length;
 const allNrLength = allNr.length;
+
+
+/* function slide */
+
 
 
 
@@ -137,4 +144,10 @@ btn.addEventListener("click",()=>{
     }else{
         console.log("you have to check one of the boxes")
     }
+})
+
+slider.addEventListener("change",(e)=>{
+    const displayNr = e.target.value;
+    console.log(displayNr)
+
 })
