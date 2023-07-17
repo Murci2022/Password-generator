@@ -29,45 +29,86 @@ const allNrLength = allNr.length;
 
 
 
-// generate random index function
+//------------------------------------- generate random index function
 function randIndex(array){
     return Math.floor(Math.random()*array.length)
-}
-
-;
-
-console.log(randIndex(allNr))
+};
 
 
 
 
-// generate password function
+// -------------------------------------generate password function
 function generatePassword(){
     let password = "";
     
-    const indexes = [
+    if(checkBox1.checked){
+        const indexes = [
         randIndex(lowercaseLetters),
         randIndex(lowercaseLetters),
         randIndex(lowercaseLetters),
-    ]
-    password += indexes.map((index)=>lowercaseLetters[index])
+    ];
+       password += indexes.map((index)=>lowercaseLetters[index])
+       console.log(password,"checkbox1")
+    }
     
+    if(checkBox2.checked){
+        const indexes = [
+            randIndex(uppercaseLetters),
+            randIndex(uppercaseLetters),
+            randIndex(uppercaseLetters),
+        ];
+        password += indexes.map((index)=>uppercaseLetters[index])
+        console.log(password,"checkbox2")
+      }
+
     
-    return password
+    return password;
+    
+   
     
     
 }
 
 /* -----------Fisher-Yates Shuffle---------------- */
 
+function shuffleFunc(fullArr){
+   
+    console.log("fullArr",fullArr)
+    const fullArrLength = fullArr.length
+
+   console.log(fullArr.length,"fullArr")
+
+   let temp = ""
+   let i = fullArr.length
+
+   while(--i>0){
+    const j = Math.floor(Math.random()*fullArrLength)
+   temp = fullArr[j]
+   fullArr[j]=fullArr[i]
+   fullArr[i]=temp;
+   
+   return fullArr
+   }
+}
+
+
+
+
+
+
 
 
 // click event on btn
 btn.addEventListener("click",()=>{
     if(checkBox1.checked){
-       console.log(generatePassword()) 
+        
+        console.log(generatePassword())
+        const fullShaffledPassword = shuffleFunc(generatePassword());
+   
+
+        displayPassword.innerHTML = fullShaffledPassword;
+       
     }else{
-        console.log("not checked")
+        console.log("you have to check one of the boxes")
     }
-    
 })
