@@ -4,7 +4,6 @@ const checkBox1 = document.getElementById("checkbox1");
 const checkBox2 = document.getElementById("checkbox2");
 const checkBox3 = document.getElementById("checkbox3");
 /* initial password */
-let password = [];
 
 
 
@@ -39,45 +38,29 @@ function randIndex(array){
 
 console.log(randIndex(allNr))
 /* -----------Fisher-Yates Shuffle---------------- */
-// generate shuffled array
-function shuffleFunc(arr){
-    let i = arr.length;
-    let temp = "";
 
-    while(--i>0){
-        let j = Math.floor(Math.random()*arr.length)
-        console.log(i,"i")
-        console.log(j,"j")
-    }
-
-    console.log("arr",arr)
-}
 
 
 
 // generate password function
 function generatePassword(){
-    
-    const passwordLetter = [
-        lowercaseLetters[randIndex(lowercaseLetters)],
-        lowercaseLetters[randIndex(lowercaseLetters)],
-        lowercaseLetters[randIndex(lowercaseLetters)],
-        lowercaseLetters[randIndex(lowercaseLetters)],
-        lowercaseLetters[randIndex(lowercaseLetters)],
-        lowercaseLetters[randIndex(lowercaseLetters)],
-        lowercaseLetters[randIndex(lowercaseLetters)],
-        lowercaseLetters[randIndex(lowercaseLetters)],
-        
-    ]
-    shuffleFunc(passwordLetter);
-    password = passwordLetter.join("")
+    let password = "";
+   
+       const indexes = [
+        randIndex(lowercaseLetters),
+        randIndex(lowercaseLetters),
+        randIndex(lowercaseLetters),
+         ]
+    password += indexes.map((index)=>lowercaseLetters[index])
      
 
-    return password;
+    return password
+  
+   
 }
 
+console.log(generatePassword(),"on click")
 
 // click event on btn
 btn.addEventListener("click",()=>{
-    console.log(generatePassword())
 })
