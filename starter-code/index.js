@@ -60,6 +60,15 @@ function generatePassword(){
         password += indexes.map((index)=>uppercaseLetters[index]).join("")
        
       }
+    if(checkBox3.checked){
+        const indexes = [
+            randIndex(allNr),
+            randIndex(allNr),
+            randIndex(allNr),
+        ];
+        password += indexes.map((index)=>allNr[index]).join("")
+       
+      }
 
     
     return password;
