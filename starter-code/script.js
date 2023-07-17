@@ -24,7 +24,23 @@ const allNr = [0,1,2,3,4,5,6,7,8,9];
 const abcLength = lowercaseLetters.length;
 const allNrLength = allNr.length;
 
+/* ------------functions--------------------- */
 
+function shuffleFunc(array){
+    
+    const arrLenght = array.length;
+    let temp = ""
+    let i = array.length;
+    while(--i>0){
+        
+       const j = Math.ceil(Math.random()*arrLenght) ;
+       temp = array[j];
+       array[j] = array[i]
+       array[i] = temp;
+       
+    }
+    return array;
+}
 
 //function to generate number for LOWERCASE letters
 function generateNrCheckbox1(){
@@ -84,21 +100,6 @@ genUpperLetters(generateNrCheckbox2()); //initial password
 genNumber(generateNrCheckbox3());      // initial password
 
 
-function shuffleFunc(array){
-    
-    const arrLenght = array.length;
-    let temp = ""
-    let i = array.length;
-    while(--i>0){
-        
-       const j = Math.ceil(Math.random()*arrLenght) ;
-       temp = array[j];
-       array[j] = array[i]
-       array[i] = temp;
-       
-    }
-    return array;
-}
 
 btn.addEventListener("click",()=>{
     console.log("click")
