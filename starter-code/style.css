@@ -180,7 +180,7 @@ input[type=range]::-ms-fill-upper {
     background: #f7f8fb;
 }
 
-
+/* checkbox */
 .checkbox-group{
    /*  border:2px white solid; */
     position: relative;
@@ -188,6 +188,10 @@ input[type=range]::-ms-fill-upper {
     flex-direction: column;
     margin:30px 0 0 0;
     
+}
+
+input[type="checkbox"]{
+    background-color: #70a5ff;
 }
 
 .form-holder{
@@ -199,13 +203,13 @@ input[type=range]::-ms-fill-upper {
     width: 100%;
     height: 50px;
     margin: 30px 0;
-    background-color: #4f71a9;
+    background-color: #70a5ff;
     cursor: pointer;
     transition: background-color 0.3 ease;
 }
 
 .btn:hover {
-    background-color: #70a5ff;
+    background-color: #4f71a9;
 }
 
 .btn:active{
@@ -219,13 +223,15 @@ input[type=range]::-ms-fill-upper {
     position:absolute;
     bottom: 8px;
     right: 0;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: red;
     cursor: pointer;
     transition: background-color 0.3 ease;
 }
 .btn-reset:hover {
-    background-color: rgb(247, 122, 122);
+    background-color: rgb(165, 0, 0);
 }
 
 .btn-reset:active{
