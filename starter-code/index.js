@@ -10,6 +10,7 @@ const password = document.getElementById("header-title")
 const svgTitle = document.getElementById("svg-title")
 const resetBtn = document.getElementById("btn-reset")
 const msg = document.getElementById("msg")
+const msgReset = document.getElementById("msg-reset")
 
 const slider = document.getElementById("slider");
 
@@ -225,7 +226,7 @@ function copyToClipboard(){
 
         setTimeout(()=>{
             svgTitle.innerHTML = "copy to clipboard"
-        },1000)
+        },4400)
     })
 }
 
@@ -267,11 +268,13 @@ resetBtn.addEventListener("click",()=>{
 
     //reseted@
     password.style.visibility= "hidden"
-    tempPass.innerHTML = "reseted@"
+   
+     msgReset.style.opacity="1"
+    console.log(msgReset)
 
     setTimeout(()=>{
-        password.style.color = "#fff" 
-    },500)
+        msgReset.style.opacity = "0" 
+    },2000)
    
 
     

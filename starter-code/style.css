@@ -98,15 +98,15 @@ a {
 .msg{
     position: absolute;
     right: 0;
-    top: -25px;
+    bottom: -30px;
     
    opacity: 0;
    transition: opacity 1s ease;
 }
 .msg-reset{
     position: absolute;
-    left: 0;
-    top: -25px;
+    left: 15px;
+    top: 25px;
     color: red;
    opacity: 0;
    transition: opacity 1s ease;
