@@ -6,6 +6,10 @@ const checkBox3 = document.getElementById("checkbox3");
 const checkBox4 = document.getElementById("checkbox4");
 const nrConti = document.getElementById("nr")
 const copyBtn = document.getElementById("header-icon")
+const password = document.getElementById("header-title")
+const svgTitle = document.getElementById("svg-title")
+const resetBtn = document.getElementById("btn-reset")
+const msg = document.getElementById("msg")
 
 const slider = document.getElementById("slider");
 
@@ -166,10 +170,10 @@ function shuffleFunc(fullArr){
     
     while(--i>=0){
         const j = Math.floor(Math.random()*(shuffledArray.length))
-   temp = shuffledArray[j]
-   shuffledArray[j]=shuffledArray[i]
-   shuffledArray[i]=temp;
-   
+        temp = shuffledArray[j]
+        shuffledArray[j]=shuffledArray[i]
+        shuffledArray[i]=temp;
+        
 }
 return shuffledArray.join("").slice(0,newDisplayNr)
 }
@@ -183,15 +187,16 @@ return shuffledArray.join("").slice(0,newDisplayNr)
 
 // click event on btn
 btn.addEventListener("click",()=>{
+    svgTitle.innerHTML = "copy to clipboard"
     if(checkBox1.checked || checkBox2 || checkBox3 || checkBox4){
         
-          const endArr = shuffleFunc(generatePassword())
-          
+        const endArr = shuffleFunc(generatePassword())
+        
         const fullShaffledPassword = endArr ;
-   
-
+        
+        
         displayPassword.innerHTML = fullShaffledPassword;
-       
+        
     }else{
         console.log("you have to check one of the boxes")
     }
@@ -200,18 +205,71 @@ btn.addEventListener("click",()=>{
 /* slider change */
 
 slider.addEventListener("change",(e)=>{
+    console.log(e.target.value,"posi")
     displayNr = e.target.value;
     testFunc(displayNr)
     
-
+    
     nrConti.innerHTML = displayNr;
     
-
+    
 })
+
+/* function copyToClipboard */
+function copyToClipboard(){
+    console.log(password.innerText,"copyToClipboard")
+    const copyText = password.innerText;
+    navigator.clipboard.writeText(copyText).then(()=>{
+        console.log(copyText,"copied")
+
+        setTimeout(()=>{
+            svgTitle.innerHTML = "copy to clipboard"
+        },1000)
+    })
+}
 
 /*  copy button */
 
 copyBtn.addEventListener("click",()=>{
-    console.log("click")
+    // display msg
+    msg.style.opacity = "1"
+
+    setTimeout(()=>{
+        msg.style.opacity = "0"
+    },1800)
+
+   
+    
+    copyToClipboard();
+    
+
 })
+
+/* reset btn */
+
+resetBtn.addEventListener("click",()=>{
+
+
+    //checkbox reset
+    checkBox1.checked = true;
+    checkBox2.checked = false;
+    checkBox3.checked = false;
+    checkBox4.checked = false;
+
+    // number reset
+    displayNr = 8;
+    nrConti.innerHTML = displayNr;
+
+    //slider reset
+    console.log(slider.value,"sliderValue")
+    slider.value = displayNr
+
+    
+  
+    console.log("click")
+    console.log(nrConti.innerText)
+    
+    console.log(checkBox2)
+})
+
 
