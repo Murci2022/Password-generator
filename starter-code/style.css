@@ -5,6 +5,7 @@
     --bg-color: #131218;
     --color: #ebeaf2;
     --card-color: #24232B;
+    --icon-color:#A4FFAF;
   }
   
 
@@ -65,7 +66,8 @@ a {
 /* Header for display+clipboard */
 
 .header{
-    
+    position: relative;
+    border: 1px solid #fff;
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -78,6 +80,13 @@ a {
     
 }
 
+.msg{
+    position: absolute;
+    right: 0;
+    top: -25px;
+    visibility: hidden;
+}
+
 /* Article */
 
 .head{
@@ -88,11 +97,22 @@ a {
 }
 
 h2{
-    color:#A4FFAF;
+    color:var(--icon-color);
 }
 
 .nr{
     color: var(--color);
+}
+
+
+.header-icon path{
+    fill:#e1e1e1;
+}
+.header-icon:hover path{
+    fill:#999999;
+}
+.header-icon:active path{
+    fill:var(--icon-color);
 }
 
 article{
@@ -238,6 +258,7 @@ input[type="checkbox"]{
     border: 1px solid var(--color);
     background-color: transparent;
     color: #fff;
+    
 
 }
 

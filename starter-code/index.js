@@ -204,6 +204,7 @@ btn.addEventListener("click",()=>{
 /* slider change */
 
 slider.addEventListener("change",(e)=>{
+    console.log(e.target.value,"posi")
     displayNr = e.target.value;
     testFunc(displayNr)
     
@@ -219,19 +220,20 @@ function copyToClipboard(){
     const copyText = password.innerText;
     navigator.clipboard.writeText(copyText).then(()=>{
         console.log(copyText,"copied")
+        setTimeout(()=>{
+            svgTitle.innerHTML = "copy to clipboard"
+        },1000)
     })
 }
 
 /*  copy button */
 
 copyBtn.addEventListener("click",()=>{
-    console.log("click")
+    console.log("click!!!!!")
     console.log(password.innerText)
     svgTitle.innerHTML ="copied!"
 
-    setTimeout(()=>{
-        svgTitle.innerHTML = "copy it again"
-    },1000)
+   
     
     copyToClipboard();
     
@@ -241,12 +243,20 @@ copyBtn.addEventListener("click",()=>{
 /* reset btn */
 
 resetBtn.addEventListener("click",()=>{
+
+    //checkbox reset
     checkBox1.checked = true;
     checkBox2.checked = false;
     checkBox3.checked = false;
     checkBox4.checked = false;
 
-    nrConti.innerHTML = 8;
+    // number reset
+    displayNr = 8;
+    nrConti.innerHTML = displayNr;
+
+    //slider reset
+    console.log(slider.value,"sliderValue")
+    slider.value = displayNr
   
     console.log("click")
     console.log(nrConti.innerText)
