@@ -4,7 +4,8 @@ const checkBox1 = document.getElementById("checkbox1");
 const checkBox2 = document.getElementById("checkbox2");
 const checkBox3 = document.getElementById("checkbox3");
 const checkBox4 = document.getElementById("checkbox4");
-const nrConti = document.getElementById("nr-conti")
+const nrConti = document.getElementById("nr")
+const copyBtn = document.getElementById("header-icon")
 
 const slider = document.getElementById("slider");
 
@@ -31,8 +32,7 @@ const allNr = [0,1,2,3,4,5,6,7,8,9];
 
 /* symbols */
 const allSymbols = [
-    "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "[",
-    "]", "{", "}", "|", ";", ":", "'", "\"", ",", ".", "<", ">", "/", "?", "`", "~"
+    "!", "@", "#", "$", "%",  "&", "*","+",
   ];
   
 
@@ -72,6 +72,15 @@ function generatePassword(){
             randIndex(lowercaseLetters),
             randIndex(lowercaseLetters),
             randIndex(lowercaseLetters),
+            randIndex(lowercaseLetters),
+            randIndex(lowercaseLetters),
+            randIndex(lowercaseLetters),
+            randIndex(lowercaseLetters),
+            randIndex(lowercaseLetters),
+            randIndex(lowercaseLetters),
+            randIndex(lowercaseLetters),
+            randIndex(lowercaseLetters),
+            randIndex(lowercaseLetters),
         ];
         password += indexes.map((index)=>lowercaseLetters[index]).join("")
 
@@ -80,6 +89,15 @@ function generatePassword(){
     
     if(checkBox2.checked){
         const indexes = [
+            randIndex(uppercaseLetters),
+            randIndex(uppercaseLetters),
+            randIndex(uppercaseLetters),
+            randIndex(uppercaseLetters),
+            randIndex(uppercaseLetters),
+            randIndex(uppercaseLetters),
+            randIndex(uppercaseLetters),
+            randIndex(uppercaseLetters),
+            randIndex(uppercaseLetters),
             randIndex(uppercaseLetters),
             randIndex(uppercaseLetters),
             randIndex(uppercaseLetters),
@@ -92,12 +110,30 @@ function generatePassword(){
             randIndex(allNr),
             randIndex(allNr),
             randIndex(allNr),
+            randIndex(allNr),
+            randIndex(allNr),
+            randIndex(allNr),
+            randIndex(allNr),
+            randIndex(allNr),
+            randIndex(allNr),
+            randIndex(allNr),
+            randIndex(allNr),
+            randIndex(allNr),
         ];
         password += indexes.map((index)=>allNr[index]).join("")
         
     }
     if(checkBox4.checked){
         const indexes = [
+            randIndex(allSymbols),
+            randIndex(allSymbols),
+            randIndex(allSymbols),
+            randIndex(allSymbols),
+            randIndex(allSymbols),
+            randIndex(allSymbols),
+            randIndex(allSymbols),
+            randIndex(allSymbols),
+            randIndex(allSymbols),
             randIndex(allSymbols),
             randIndex(allSymbols),
             randIndex(allSymbols),
@@ -135,7 +171,7 @@ function shuffleFunc(fullArr){
    shuffledArray[i]=temp;
    
 }
-return shuffledArray.join("")
+return shuffledArray.join("").slice(0,newDisplayNr)
 }
 
 
@@ -149,8 +185,9 @@ return shuffledArray.join("")
 btn.addEventListener("click",()=>{
     if(checkBox1.checked || checkBox2 || checkBox3 || checkBox4){
         
-   
-        const fullShaffledPassword = shuffleFunc(generatePassword());
+          const endArr = shuffleFunc(generatePassword())
+          
+        const fullShaffledPassword = endArr ;
    
 
         displayPassword.innerHTML = fullShaffledPassword;
@@ -160,6 +197,8 @@ btn.addEventListener("click",()=>{
     }
 })
 
+/* slider change */
+
 slider.addEventListener("change",(e)=>{
     displayNr = e.target.value;
     testFunc(displayNr)
@@ -168,5 +207,11 @@ slider.addEventListener("change",(e)=>{
     nrConti.innerHTML = displayNr;
     
 
+})
+
+/*  copy button */
+
+copyBtn.addEventListener("click",()=>{
+    console.log("click")
 })
 
