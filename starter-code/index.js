@@ -8,6 +8,7 @@ const nrConti = document.getElementById("nr")
 const copyBtn = document.getElementById("header-icon")
 const password = document.getElementById("header-title")
 const svgTitle = document.getElementById("svg-title")
+const resetBtn = document.getElementById("btn-reset")
 
 const slider = document.getElementById("slider");
 
@@ -235,6 +236,12 @@ copyBtn.addEventListener("click",()=>{
     copyToClipboard();
     
 
+})
+
+/* reset btn */
+
+resetBtn.addEventListener("click",()=>{
+    console.log("click")
 })
 
 
