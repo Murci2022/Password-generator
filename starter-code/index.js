@@ -232,10 +232,11 @@ function copyToClipboard(){
 
 copyBtn.addEventListener("click",()=>{
     // display msg
-    msg.style.visibility = "visible"
-    console.log("click!!!!!")
-    console.log(password.innerText)
-    svgTitle.innerHTML ="copied!"
+    msg.style.opacity = "1"
+
+    setTimeout(()=>{
+        msg.style.opacity = "0"
+    },1800)
 
    
     
