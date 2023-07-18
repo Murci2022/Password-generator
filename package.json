@@ -1,0 +1,11 @@
+{
+  "name": "password-generator-app",
+  "version": "1.0.0",
+  "description": "description: A simple password generator application that generates secure and random passwords based on user-defined criteria.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "murci2022",
+  "license": "ISC"
+}
