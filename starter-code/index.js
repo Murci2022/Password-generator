@@ -9,6 +9,7 @@ const copyBtn = document.getElementById("header-icon")
 const password = document.getElementById("header-title")
 const svgTitle = document.getElementById("svg-title")
 const resetBtn = document.getElementById("btn-reset")
+const msg = document.getElementById("msg")
 
 const slider = document.getElementById("slider");
 
@@ -169,10 +170,10 @@ function shuffleFunc(fullArr){
     
     while(--i>=0){
         const j = Math.floor(Math.random()*(shuffledArray.length))
-   temp = shuffledArray[j]
-   shuffledArray[j]=shuffledArray[i]
-   shuffledArray[i]=temp;
-   
+        temp = shuffledArray[j]
+        shuffledArray[j]=shuffledArray[i]
+        shuffledArray[i]=temp;
+        
 }
 return shuffledArray.join("").slice(0,newDisplayNr)
 }
@@ -189,13 +190,13 @@ btn.addEventListener("click",()=>{
     svgTitle.innerHTML = "copy to clipboard"
     if(checkBox1.checked || checkBox2 || checkBox3 || checkBox4){
         
-          const endArr = shuffleFunc(generatePassword())
-          
+        const endArr = shuffleFunc(generatePassword())
+        
         const fullShaffledPassword = endArr ;
-   
-
+        
+        
         displayPassword.innerHTML = fullShaffledPassword;
-       
+        
     }else{
         console.log("you have to check one of the boxes")
     }
@@ -220,6 +221,7 @@ function copyToClipboard(){
     const copyText = password.innerText;
     navigator.clipboard.writeText(copyText).then(()=>{
         console.log(copyText,"copied")
+
         setTimeout(()=>{
             svgTitle.innerHTML = "copy to clipboard"
         },1000)
@@ -229,6 +231,8 @@ function copyToClipboard(){
 /*  copy button */
 
 copyBtn.addEventListener("click",()=>{
+    // display msg
+    msg.style.visibility = "visible"
     console.log("click!!!!!")
     console.log(password.innerText)
     svgTitle.innerHTML ="copied!"
@@ -244,6 +248,7 @@ copyBtn.addEventListener("click",()=>{
 
 resetBtn.addEventListener("click",()=>{
 
+
     //checkbox reset
     checkBox1.checked = true;
     checkBox2.checked = false;
@@ -257,6 +262,8 @@ resetBtn.addEventListener("click",()=>{
     //slider reset
     console.log(slider.value,"sliderValue")
     slider.value = displayNr
+
+    
   
     console.log("click")
     console.log(nrConti.innerText)
