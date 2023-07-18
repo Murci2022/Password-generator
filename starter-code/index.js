@@ -245,10 +245,12 @@ resetBtn.addEventListener("click",()=>{
     checkBox2.checked = false;
     checkBox3.checked = false;
     checkBox4.checked = false;
-    const isChecked = checkBox1.checked;
+
+    nrConti.innerHTML = 8;
+  
     console.log("click")
     console.log(nrConti.innerText)
-    console.log(isChecked)
+    
     console.log(checkBox2)
 })
 
