@@ -7,6 +7,7 @@ const checkBox4 = document.getElementById("checkbox4");
 const nrConti = document.getElementById("nr")
 const copyBtn = document.getElementById("header-icon")
 const password = document.getElementById("header-title")
+const svgTitle = document.getElementById("title")
 
 const slider = document.getElementById("slider");
 
@@ -224,7 +225,13 @@ function copyToClipboard(){
 copyBtn.addEventListener("click",()=>{
     console.log("click")
     console.log(password.innerText)
+    svgTitle.innerHTML ="copied!"
+
+    
+    
     copyToClipboard();
+    
 
 })
+
 

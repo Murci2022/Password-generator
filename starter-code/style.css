@@ -192,6 +192,7 @@ input[type=range] {
     height: 50px;
     margin: 20px 0;
     background-color: #4f71a9;
+    cursor: pointer;
 }
 
 
