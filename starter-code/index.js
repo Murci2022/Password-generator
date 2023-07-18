@@ -7,7 +7,7 @@ const checkBox4 = document.getElementById("checkbox4");
 const nrConti = document.getElementById("nr")
 const copyBtn = document.getElementById("header-icon")
 const password = document.getElementById("header-title")
-const svgTitle = document.getElementById("title")
+const svgTitle = document.getElementById("svg-title")
 
 const slider = document.getElementById("slider");
 
@@ -185,6 +185,7 @@ return shuffledArray.join("").slice(0,newDisplayNr)
 
 // click event on btn
 btn.addEventListener("click",()=>{
+    svgTitle.innerHTML = "copy to clipboard"
     if(checkBox1.checked || checkBox2 || checkBox3 || checkBox4){
         
           const endArr = shuffleFunc(generatePassword())
@@ -205,10 +206,10 @@ slider.addEventListener("change",(e)=>{
     displayNr = e.target.value;
     testFunc(displayNr)
     
-
+    
     nrConti.innerHTML = displayNr;
     
-
+    
 })
 
 /* function copyToClipboard */
@@ -227,7 +228,9 @@ copyBtn.addEventListener("click",()=>{
     console.log(password.innerText)
     svgTitle.innerHTML ="copied!"
 
-    
+    setTimeout(()=>{
+        svgTitle.innerHTML = "copy it again"
+    },1000)
     
     copyToClipboard();
     
