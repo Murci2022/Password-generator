@@ -212,7 +212,11 @@ slider.addEventListener("change",(e)=>{
 
 /* function copyToClipboard */
 function copyToClipboard(){
-    console.log("works")
+    console.log(password.innerText,"copyToClipboard")
+    const copyText = password.innerText;
+    navigator.clipboard.writeText(copyText).then(()=>{
+        console.log(copyText,"copied")
+    })
 }
 
 /*  copy button */
