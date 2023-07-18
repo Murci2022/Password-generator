@@ -1,3 +1,26 @@
+# Password generator app solution
+
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+**Note: Delete this note and update the table of contents based on what sections you keep.**
+
+## Overview
+
+My coding challenge was to develop a powerful Password Generator App that would empower users with a variety of features and options. I set out to create an app that would not only generate secure passwords but also provide a seamless user experience.
+
 # Password generator app
 
 ![Design preview for the Password generator app coding challenge](./preview.png)
@@ -25,53 +48,81 @@ My challenge was to build a password generator app with the following user capab
 
 
 
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
-## Deploying your project
+### Links
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### Built with
 
-## Create a custom `README.md`
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- [Vanilla JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) 
+- [Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS) - 
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+### What I learned
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+My mission was to implement a password generator with customizable options and clipboard functionality. This involved manipulating strings and generating secure passwords based on user preferences.
+I gained experience in interacting with the clipboard, allowing users to easily copy and paste generated passwords for convenience and security.
+Resetting the user interface to default settings enabled a fresh start, and I learned how to handle user input, validate it, and provide appropriate feedback for a seamless user experience.
+Applying CSS styling and incorporating interactive states like hover and focus improved the visual appeal and interactivity of the app, enhancing user engagement.
+Throughout the project, I developed problem-solving skills, attention to detail, and a structured approach to coding, contributing to my growth as a web developer.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+To see how you can add code snippets, see below:
 
-## Submitting your solution
+```html
+        <span class="range-input-conti" id="range-input-conti">
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+          <input type="range" class="custom-range" id="slider" min="0" max="12" value="8" step="1">
+        </span>
+```
+```css
+.msg{
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+```
+```js
+copyBtn.addEventListener("click",()=>{
+    msg.style.opacity = "1"
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+    setTimeout(()=>{
+        msg.style.opacity = "0"
+    },1800)
+    copyToClipboard();
+    
 
-**⚠️ IMPORTANT ⚠️: With these premium challenges, please be sure not to upload the design files to GitHub when you're submitting to the platform and sharing it around. If you've created a brand new project, the easiest way to do that is to copy across the `.gitignore` provided in this starter project.**
+})
+```
 
-## Sharing your solution
 
-There are multiple places you can share your solution:
+### Continued development
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+In future projects, I want to focus on the following areas to improve my skills:
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+Data Fetching: Enhancing data fetching techniques, working with APIs, and handling asynchronous programming.
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+State Management: Improving state management in larger applications using solutions like Redux, MobX, or Context API.
 
-## Got feedback for us?
+Testing and Debugging: Exploring testing methodologies and effective debugging techniques for ensuring code quality and reliability.
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+### Useful resources
 
-**Have fun building!** 🚀
+https://eloquentjavascript.net/
+- [Javascript ebook](https://eloquentjavascript.net/) - This helped me for learning the basics.
+
+## Author
+
+- Website - [Murci2022/ Mateus K. Y.](portfolio-mate.vercel.app)
+
+## Acknowledgments
+
+Thank you to Marijn Haverbeke:
+
