@@ -187,7 +187,8 @@ return shuffledArray.join("").slice(0,newDisplayNr)
 
 // click event on btn
 btn.addEventListener("click",()=>{
-    svgTitle.innerHTML = "copy to clipboard"
+    svgTitle.innerHTML = "copy to clipboard";
+    password.style.visibility= "visible";
     if(checkBox1.checked || checkBox2 || checkBox3 || checkBox4){
         
         const endArr = shuffleFunc(generatePassword())
@@ -263,6 +264,15 @@ resetBtn.addEventListener("click",()=>{
     //slider reset
     console.log(slider.value,"sliderValue")
     slider.value = displayNr
+
+    //reseted@
+    password.style.visibility= "hidden"
+    tempPass.innerHTML = "reseted@"
+
+    setTimeout(()=>{
+        password.style.color = "#fff" 
+    },500)
+   
 
     
   
