@@ -241,7 +241,15 @@ copyBtn.addEventListener("click",()=>{
 /* reset btn */
 
 resetBtn.addEventListener("click",()=>{
+    checkBox1.checked = true;
+    checkBox2.checked = false;
+    checkBox3.checked = false;
+    checkBox4.checked = false;
+    const isChecked = checkBox1.checked;
     console.log("click")
+    console.log(nrConti.innerText)
+    console.log(isChecked)
+    console.log(checkBox2)
 })
 
 
