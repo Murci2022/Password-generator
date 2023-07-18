@@ -5,6 +5,7 @@ const checkBox2 = document.getElementById("checkbox2");
 const checkBox3 = document.getElementById("checkbox3");
 const checkBox4 = document.getElementById("checkbox4");
 const nrConti = document.getElementById("nr")
+const copyBtn = document.getElementById("header-icon")
 
 const slider = document.getElementById("slider");
 
@@ -196,6 +197,8 @@ btn.addEventListener("click",()=>{
     }
 })
 
+/* slider change */
+
 slider.addEventListener("change",(e)=>{
     displayNr = e.target.value;
     testFunc(displayNr)
@@ -204,5 +207,11 @@ slider.addEventListener("change",(e)=>{
     nrConti.innerHTML = displayNr;
     
 
+})
+
+/*  copy button */
+
+copyBtn.addEventListener("click",()=>{
+    console.log("click")
 })
 
