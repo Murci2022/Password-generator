@@ -198,10 +198,22 @@ input[type=range]::-ms-fill-upper {
     border-radius: 5px;
     width: 100%;
     height: 50px;
-    margin: 20px  0;
+    margin: 30px 0;
     background-color: #4f71a9;
     cursor: pointer;
+    transition: background-color 0.3 ease;
 }
+
+.btn:hover {
+    background-color: #70a5ff;
+}
+
+.btn:active{
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid var(--color);
+}
+
 
 .btn-reset{
     position:absolute;
@@ -210,7 +222,27 @@ input[type=range]::-ms-fill-upper {
     border-radius: 50%;
     background-color: red;
     cursor: pointer;
+    transition: background-color 0.3 ease;
 }
+.btn-reset:hover {
+    background-color: rgb(247, 122, 122);
+}
+
+.btn-reset:active{
+    border: 1px solid var(--color);
+    background-color: transparent;
+    color: #fff;
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
