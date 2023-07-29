@@ -45,13 +45,9 @@ My challenge was to build a password generator app with the following user capab
 ![](./screenshot.png)
 
 
-
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://password-generator-xi-drab.vercel.app/
 
 
 ### Built with
@@ -71,7 +67,7 @@ Resetting the user interface to default settings enabled a fresh start, and I le
 Applying CSS styling and incorporating interactive states like hover and focus improved the visual appeal and interactivity of the app, enhancing user engagement.
 Throughout the project, I developed problem-solving skills, attention to detail, and a structured approach to coding, contributing to my growth as a web developer.
 
-To see how you can add code snippets, see below:
+My favorites from this challenge:
 
 ```html
         <span class="range-input-conti" id="range-input-conti">
