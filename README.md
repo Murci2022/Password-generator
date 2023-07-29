@@ -115,7 +115,7 @@ https://eloquentjavascript.net/
 
 ## Author
 
-- Website - [Murci2022/ Mateus K. Y.](portfolio-mate.vercel.app)
+- Website - [Murci2022/ M. K. Y.](portfolio-mate.vercel.app)
 
 ## Acknowledgments
 
