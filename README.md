@@ -92,11 +92,11 @@ In future projects, I aim to improve in the following areas:
 
 - [Javascript ebook](https://eloquentjavascript.net/) - This resource was fundamental forlearning the basics.
 
+## Acknowledgments
+
+Thank you to Marijn Haverbeke and javascript.info for providing valuable resources and guidance.
+
 ## Author
 
 - Website - [Murci2022/ Maté Kamaras](portfolio-mate.vercel.app) -
   Personal portfolio showcasing my web development journey and projects.
-
-## Acknowledgments
-
-Thank you to Marijn Haverbeke and javascript.info for providing valuable resources and guidance.
