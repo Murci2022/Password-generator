@@ -2,7 +2,7 @@
 
 ## Overview
 
-My coding challenge was to develop a powerful Password Generator App that would empower users with a variety of features and options. I set out to create an app that would not only generate secure passwords but also provide a seamless user experience.
+Welcome to my Password Generator App built using Vanilla Javascript. I developed this app with a variety of features and options to empower users to generate powerful passwords with a seamless user experience.
 
 ## Table of contents
 
@@ -12,6 +12,7 @@ My coding challenge was to develop a powerful Password Generator App that would 
   - [Links](#links)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [My favorite code](#my-favorite-code-from-this-challenge)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
   - [Acknowledgments](#acknowledgments)
@@ -33,7 +34,7 @@ My challenge was to build a password generator app with the following user capab
 
 ### Screenshot
 
-![](./screenshot.png)
+![Preview of Password Generator App](./PGscreenshot.png)
 
 ### Links
 
@@ -51,39 +52,20 @@ My challenge was to build a password generator app with the following user capab
 ### What I learned
 
 My mission was to implement a password generator with customizable options and clipboard functionality. This involved manipulating strings and generating secure passwords based on user preferences.
-I gained experience in interacting with the clipboard, allowing users to easily copy and paste generated passwords for convenience and security.
-Resetting the user interface to default settings enabled a fresh start, and I learned how to handle user input, validate it, and provide appropriate feedback for a seamless user experience.
-Applying CSS styling and incorporating interactive states like hover and focus improved the visual appeal and interactivity of the app, enhancing user engagement.
-Throughout the project, I developed problem-solving skills, attention to detail, and a structured approach to coding, contributing to my growth as a web developer.
 
-My favorites from this challenge:
+- I gained experience in interacting with the clipboard, allowing users to easily copy and paste generated passwords for convenience and security.
+- Resetting the user interface to default settings enabled a fresh start.
+- I learned how to handle user input, validate it, and provide appropriate feedback for a seamless user experience.
+- Applying CSS styling and incorporating interactive states like hover and focus improved the visual appeal and interactivity of the app, enhancing user engagement.
+- Throughout the project, I developed problem-solving skills, attention to detail, and a structured approach to coding, contributing to my growth as a web developer.
 
-```html
-<span
-  class="range-input-conti"
-  id="range-input-conti"
->
-  <input
-    type="range"
-    class="custom-range"
-    id="slider"
-    min="0"
-    max="12"
-    value="8"
-    step="1"
-  />
-</span>
-```
+## My favorite code from this challenge:
 
-```css
-.msg {
-  position: absolute;
-  right: 0;
-  bottom: -30px;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-```
+I needed to display a message for a short time when the button was clicked. So I found this solution for this problem. This JavaScript code snippet adds a click event listener to an element with the ID copyBtn.
+
+- When clicked, it sets the opacity of an element with the ID msg to 1, making it visible.
+  Using setTimeout, it then sets the opacity back to 0 after a delay of 1800 milliseconds (1.8 seconds).
+- Finally, the function copyToClipboard() is called, performing the action of copying something to the clipboard.
 
 ```js
 copyBtn.addEventListener('click', () => {
@@ -98,24 +80,23 @@ copyBtn.addEventListener('click', () => {
 
 ### Continued development
 
-In future projects, I want to focus on the following areas to improve my skills:
+In future projects, I aim to improve in the following areas:
 
-Data Fetching: Enhancing data fetching techniques, working with APIs, and handling asynchronous programming.
+- Data Fetching: Enhancing data fetching techniques, working with APIs, and handling asynchronous programming.
 
-State Management: Improving state management in larger applications using solutions like Redux, MobX, or Context API.
-
-Testing and Debugging: Exploring testing methodologies and effective debugging techniques for ensuring code quality and reliability.
+- State Management: Improving state management in larger applications using solutions like Redux.
 
 ### Useful resources
 
-https://eloquentjavascript.net/
+- [Javascript ebook](https://javascript.info/) - This resource was giving me a nice and structured overview of Javascript.
 
-- [Javascript ebook](https://eloquentjavascript.net/) - This helped me for learning the basics.
+- [Javascript ebook](https://eloquentjavascript.net/) - This resource was fundamental forlearning the basics.
 
 ## Author
 
-- Website - [Murci2022/ M. K. Y.](portfolio-mate.vercel.app)
+- Website - [Murci2022/ Maté Kamaras](portfolio-mate.vercel.app) -
+  Personal portfolio showcasing my web development journey and projects.
 
 ## Acknowledgments
 
-Thank you to Marijn Haverbeke:
+Thank you to Marijn Haverbeke and javascript.info for providing valuable resources and guidance.
