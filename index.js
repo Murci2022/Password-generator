@@ -151,14 +151,9 @@ btn.addEventListener('click', () => {
 
 /* slider change */
 
-function testFunc(test) {
-  console.log(test, 'test');
-}
-
 slider.addEventListener('change', (e) => {
   console.log(e.target.value, 'posi');
   displayNr = e.target.value;
-  testFunc(displayNr);
 
   nrConti.innerHTML = displayNr;
 });
