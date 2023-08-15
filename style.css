@@ -28,6 +28,7 @@ a {
 .container {
   background-color: #000000;
   color: var(--color);
+  margin: 0 10px;
   border: 2px rgb(2, 2, 2) solid;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
