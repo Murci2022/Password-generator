@@ -94,7 +94,7 @@ In future projects, I aim to improve in the following areas:
 
 ## Author
 
-- Website - [Murci2022/ Maté Kamaras](portfolio-mate.vercel.app) -
+- Website - [Murci2022/ M.K.Y.](portfolio-mate.vercel.app) -
   Personal portfolio showcasing my web development journey and projects.
 
 ## Acknowledgments
