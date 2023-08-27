@@ -98,5 +98,5 @@ Thank you to Marijn Haverbeke and javascript.info for providing valuable resourc
 
 ## Author
 
-- Website - [Murci2022/ Maté Kamaras](portfolio-mate.vercel.app) -
+- Website - [Murci2022/ M.K.Y.](portfolio-mate.vercel.app) -
   Personal portfolio showcasing my web development journey and projects.
